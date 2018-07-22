@@ -1,7 +1,6 @@
 import realtimelrc
 import vlc
 from time import sleep
-import encrypt
 import pylyrics
 from os.path import basename
 import os
@@ -24,7 +23,7 @@ new_search = pylyrics.NeteaseSearch(keyword = keyword)
 
 
 songID = new_search.get_song_ID()
-encryptedID = encrypt.encrypted_id(songID)
+
 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 #print(new_search.get_song_url(encryptedID))
 print('Searching lyrics for {}...'.format(keyword))
