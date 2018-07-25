@@ -8,8 +8,8 @@ import sys
 
 OFFSET = 0 #263
 os.system('clear')
-for i in range(14):
-    print('')
+#for i in range(14):
+#    print('')
 filepath = input('''Standby. Drag n' drop to play >''')
 
 ##UNIX specific
@@ -33,8 +33,8 @@ lrctext = new_search.lrc()
 song = vlc.MediaPlayer(filepath)
 song.play()
 os.system('clear')
-for i in range(14):
-    print('')
+#for i in range(14):
+#    print('')
 lyrics = realtimelrc.RTLyrics(lrctext)
 sleep(2)
 for i in range(10000):
@@ -44,7 +44,8 @@ for i in range(10000):
     output = lyrics.current_lyrics(ts + OFFSET)
     ts=str(ts)
     ts=ts.center(8)
-    output=output.center(60)
-    sys.stdout.write(' Timestamp: ' + ts +'ms'+ output + '\r')
+    #output=output.center(60)
+    sys.stdout.write(' Timestamp: ' + ts +'ms  '+ output + '\r')
     sys.stdout.flush()
     #print(lyrics.current_lyrics(ts + OFFSET), end = '')
+    
